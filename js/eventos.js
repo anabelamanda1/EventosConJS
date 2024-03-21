@@ -66,10 +66,10 @@ const comidas = [
     }
 ];
 
-
-const comidasElement = document.getElementById("Platos");
-let contenido = "";
-comidas.forEach(function(comida) {    
+function añadirComidas(){
+    const comidasElement = document.getElementById("Platos");
+    let contenido = "";
+    comidas.forEach(function(comida) {    
     let claseicon = "rico";
     if (comida.favorito) {
         claseicon = "rico";
@@ -91,3 +91,32 @@ comidas.forEach(function(comida) {
 });
 
 comidasElement.innerHTML = contenido;
+}
+
+añadirComidas();
+
+const boton = document.getElementById("sendComida");
+/* addEventListener para agregar un evento */
+/* CLICK */
+
+boton.addEventListener("click", function(){
+    //alert("ESTAS INGRESANDO UNA NUEVA COMIDA");
+    const nombre = document.getElementById("nombreComida").value;
+    const calificacion = document.getElementById("califica").value;
+    const favorito = document.getElementById("isFavorito").value;    
+    let isComidaFavorita = true;
+
+    if (isFavorito == "NO") {
+        isComidaFavorita = false;
+    }
+
+    const newComida = new Object();
+    newComida.nombre = nombre;
+    newComida.calificacion= calificacion;    
+    newComida.favorito = isComidaFavorita
+    //push para agregar al array
+    comidas.push(newComida);
+    alert("Has agregado una nueva comida");
+    //repetir la funcion
+    añadirComidas();
+});
