@@ -1,0 +1,60 @@
+.comida {
+    display: flex;
+    align-items: center;
+    border: solid 1px #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #efefef;
+    box-shadow: 0px 3px 5px #c3c3c370;
+}
+.comida .icon {
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+.comida .icon-no-rico:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #f75454;
+    transform: rotate(45deg);
+    top: 20px;
+    left: 10px;
+}
+.comida .icon-no-rico:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #f75454;
+    transform: rotate(-45deg);
+    top: 20px;
+    left: 10px;
+}
+.comida .icon-rico:before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 18px;
+    border-right: solid 2px #239126;
+    border-bottom: solid 2px #239126;
+    transform: rotate(45deg);
+    top: 10px;
+    left: 17px;
+}
+.comida .data {
+    border-right: solid 1px #bdbdbd;
+    padding: 10px 0px;
+    padding-right: 20px;
+    min-width: 250px;
+}
+.comida .data h4 {
+    margin: 0px;
+    font-size: 20px;
+}
+.comida .data p {
+    margin: 0px;
+    font-size: 18px;
+    color: #939393;
+}
