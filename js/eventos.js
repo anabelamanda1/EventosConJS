@@ -13,53 +13,63 @@ setTimeout(function(){
 
 //arrays de las listas de comida
 
-const listaComidas = [
+const comidas = [
     {
-        "plato": "Ceviche",
-        "favorito": true
+        "nombre": "Ceviche",
+        "favorito": true,
+        "calificacion":"* * * * *"
     },
     {
         "nombre": "Chancho al palo",
-        "favorito": true
+        "favorito": true,
+        "calificacion":"* * * *"
     },
     {
         "nombre": "Olluquito",
-        "favorito": false
+        "favorito": false,
+        "calificacion":"*"
     },
     {
         "nombre": "Quinua",
-        "favorito": false
+        "favorito": false,
+        "calificacion":"*"
     },
     {
         "nombre": "Caldo de gallina",
-        "favorito": true
+        "favorito": true,
+        "calificacion":"* * *"
     },
     {
         "nombre": "Crema de haba",
-        "favorito": false
+        "favorito": false,
+        "calificacion":"*"
     },
     {
         "nombre": "Sopa de mote",
-        "favorito": true
+        "favorito": true,
+        "calificacion":"* * * *"
     },
     {
         "nombre": "Ajiaco",
-        "favorito": false
+        "favorito": false,
+        "calificacion":"*"
     },
     {
         "nombre": "Sudado de pescado",
-        "favorito": false
+        "favorito": false,
+        "calificacion":"*"
     },
     {
         "nombre": "Estofado",
-        "favorito": false
+        "favorito": false,
+        "calificacion":"*"
     }
 ];
 
 
-const comidasElement = document.getElementById("listaComidas");
+const comidasElement = document.getElementById("Platos");
 let contenido = "";
-listaComidas.forEach(function(comida) {    
+comidas.forEach(function(comida) {    
     let claseicon = "rico";
     if (comida.favorito) {
         claseicon = "rico";
@@ -71,6 +81,9 @@ listaComidas.forEach(function(comida) {
             <div class="icon icon-${claseicon}"></div>
             <div class="data">
                 <h4>${comida.nombre}</h4>
+            </div>
+            <div class="califi">
+                ${comida.calificacion}
             </div>
         </div>
     `;

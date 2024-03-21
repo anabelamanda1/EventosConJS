@@ -53,8 +53,14 @@
     margin: 0px;
     font-size: 20px;
 }
-.comida .data p {
+
+.presidente .data p {
     margin: 0px;
     font-size: 18px;
     color: #939393;
+}
+.califi {
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 20px;
 }
